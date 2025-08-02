@@ -10,28 +10,28 @@ A powerful, real-time YouTube analytics dashboard that provides live insights in
 
 ![Dashboard Preview](<Screenshot 2025-08-02 140420.png>)
 
-## ✨ Features
+## Features
 
-🔥 **Live Trending Videos** from 15+ countries  
-🔍 **Real-time Search** across YouTube's database  
-📊 **Interactive Analytics** with beautiful visualizations  
-📈 **Engagement Metrics** and performance tracking  
-🎬 **Video Gallery** with thumbnails and details  
-📥 **Data Export** in multiple formats (CSV, JSON)  
-🌍 **Global Coverage** - US, CA, GB, DE, FR, IN, JP, KR, MX, RU, BR, AU, IT, ES, NL  
-⚡ **Auto-refresh** capabilities for live monitoring
+**Live Trending Videos** from 15+ countries  
+**Real-time Search** across YouTube's database  
+**Interactive Analytics** with beautiful visualizations  
+**Engagement Metrics** and performance tracking  
+**Video Gallery** with thumbnails and details  
+**Data Export** in multiple formats (CSV, JSON)  
+**Global Coverage** - US, CA, GB, DE, FR, IN, JP, KR, MX, RU, BR, AU, IT, ES, NL  
+**Auto-refresh** capabilities for live monitoring
 
-## 🎯 What This Dashboard Does
+## What This Dashboard Does
 
 Transform YouTube's vast data into actionable insights with:
-- **🔥 Live Trending Videos** from 15+ countries
-- **🔍 Real-time Search** across YouTube's database  
-- **📊 Interactive Analytics** with beautiful visualizations
-- **📈 Engagement Metrics** and performance tracking
-- **🎬 Video Gallery** with thumbnails and details
-- **📥 Data Export** in multiple formats
+- **Live Trending Videos** from 15+ countries
+- **Real-time Search** across YouTube's database  
+- **Interactive Analytics** with beautiful visualizations
+- **Engagement Metrics** and performance tracking
+- **Video Gallery** with thumbnails and details
+- **Data Export** in multiple formats
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Get Your YouTube API Key
 1. **Visit**: [Google Cloud Console](https://console.cloud.google.com/)
@@ -80,60 +80,60 @@ streamlit run app.py
 - If using Option A, enter your API key in the sidebar
 - Explore live YouTube data!
 
-## 🎨 Dashboard Features
+## Dashboard Features
 
-### 📊 **Live Metrics Dashboard**
+### **Live Metrics Dashboard**
 - **Total Videos**: Current count of trending/search results
 - **Average Views**: Real-time view averages
 - **Engagement Rate**: Live like-to-view ratios
 - **Top Category**: Most popular content category
 
-### 🔍 **Data Sources**
-- **🔥 Trending Videos**: What's hot right now in any country
-- **🔍 Search Videos**: Find specific content across YouTube
+### **Data Sources**
+- **Trending Videos**: What's hot right now in any country
+- **Search Videos**: Find specific content across YouTube
 
-### 🌍 **Global Coverage**
+### **Global Coverage**
 15+ regions including: US, CA, GB, DE, FR, IN, JP, KR, MX, RU, BR, AU, IT, ES, NL
 
-### 📈 **Interactive Visualizations**
+### **Interactive Visualizations**
 - **Category Distribution**: Bar charts and pie charts
 - **Performance Analysis**: Scatter plots of views vs engagement
 - **Channel Rankings**: Top performing channels
 - **Video Gallery**: Visual browsing with thumbnails
 
-### ⚡ **Real-time Features**
+### **Real-time Features**
 - **Auto-refresh**: Updates every 30 seconds
 - **Live Status**: Connection and update indicators
 - **Fresh Data**: Always current information
 - **Instant Filtering**: Dynamic category and region filters
 
-## 🎯 Use Cases
+## Use Cases
 
-### 📺 **Content Creators**
+### **Content Creators**
 - **Trend Spotting**: See what's viral right now
 - **Content Ideas**: Find trending topics in your niche
 - **Competitor Analysis**: Monitor other channels' performance
 - **Optimal Timing**: Understand when content trends
 
-### 💼 **Marketing Teams**
+### **Marketing Teams**
 - **Campaign Monitoring**: Track viral marketing content
 - **Audience Insights**: Understand regional preferences
 - **Competitive Intelligence**: Monitor competitor strategies
 - **Trend Forecasting**: Spot emerging topics early
 
-### 🔬 **Researchers & Analysts**
+### **Researchers & Analysts**
 - **Social Media Studies**: Analyze platform behavior
 - **Cultural Research**: Compare regional content preferences
 - **Trend Analysis**: Study viral content patterns
 - **Data Collection**: Export data for further analysis
 
-### 🎓 **Students & Educators**
+### **Students & Educators**
 - **Data Science Learning**: Hands-on experience with real data
 - **API Integration**: Learn to work with REST APIs
 - **Visualization Practice**: Create compelling charts
 - **Research Projects**: Access to current social media data
 
-## 🔧 Technical Details
+## Technical Details
 
 ### **Built With**
 - **Frontend**: Streamlit (Python web framework)
@@ -155,9 +155,9 @@ streamlit run app.py
 - **Categories**: ~1 unit per request
 - **Optimization**: Built-in caching minimizes usage
 
-## 📊 Dashboard Sections
+## Dashboard Sections
 
-### 🔍 **Sidebar Controls**
+### **Sidebar Controls**
 - **API Key Input**: Secure key management
 - **Data Source**: Toggle between trending and search
 - **Region Selection**: Choose from 15+ countries
@@ -165,20 +165,20 @@ streamlit run app.py
 - **Auto-refresh**: Enable live updates
 - **Manual Refresh**: Update data on demand
 
-### 📈 **Main Dashboard**
+### **Main Dashboard**
 - **Live Metrics**: Key performance indicators
 - **Tabbed Analytics**: Organized visualizations
 - **Video Gallery**: Visual content browser
 - **Export Tools**: Download data in multiple formats
 
-### 🎨 **Visualization Tabs**
-1. **📊 Categories**: Distribution of video categories
-2. **🏆 Top Videos**: Performance analysis and rankings
-3. **📈 Engagement**: Engagement rate analysis
-4. **🌍 Channels**: Top performing channels
-5. **🎬 Video Gallery**: Visual video browser
+### **Visualization Tabs**
+1. **Categories**: Distribution of video categories
+2. **Top Videos**: Performance analysis and rankings
+3. **Engagement**: Engagement rate analysis
+4. **Channels**: Top performing channels
+5. **Video Gallery**: Visual video browser
 
-## 🔒 Security & Best Practices
+## Security & Best Practices
 
 ### **API Key Security**
 - **Never share** your API key publicly
@@ -192,7 +192,7 @@ streamlit run app.py
 - **Use caching** to reduce API calls
 - **Optimize requests** with appropriate limits
 
-## 🚀 Deployment Options
+## Deployment Options
 
 ### **Local Development**
 ```bash
@@ -240,7 +240,7 @@ CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0
 - **Check Logs**: Look for error messages in terminal
 - **Verify Setup**: Ensure all dependencies installed
 
-## 📈 Example Insights
+## Example Insights
 
 ### **Trending Analysis**
 - "Gaming videos dominate in South Korea with 45% of trending content"
@@ -257,7 +257,7 @@ CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0
 - "Trending videos average 48 hours from publish to trend"
 - "Entertainment category shows highest comment rates"
 
-## 🎉 Success Metrics
+## Success Metrics
 
 Your dashboard is working perfectly when you see:
 - ✅ Green API connection status
@@ -267,7 +267,7 @@ Your dashboard is working perfectly when you see:
 - ✅ Export functions working
 - ✅ Auto-refresh functioning (if enabled)
 
-## 🔮 What's Next?
+## What's Next?
 
 This dashboard provides a solid foundation for YouTube analytics. Potential enhancements:
 - **Multi-platform**: Add Instagram, TikTok data
@@ -275,7 +275,7 @@ This dashboard provides a solid foundation for YouTube analytics. Potential enha
 - **Custom Alerts**: Notifications for specific trends
 - **Advanced Analytics**: Sentiment analysis, topic modeling
 
-## 📞 Support
+## Support
 
 Need help? Here's how to get support:
 1. **Test your setup**: `python test_api.py YOUR_KEY`
@@ -285,7 +285,7 @@ Need help? Here's how to get support:
 
 ---
 
-## 🚀 Ready to Explore?
+## Ready to Explore?
 
 Transform your understanding of YouTube trends with real-time data:
 
@@ -296,11 +296,9 @@ python test_api.py YOUR_API_KEY
 streamlit run app.py
 ```
 
-**Your YouTube intelligence center awaits!** 🎬📊🔴
+## Contributing
 
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+We welcome contributions! Please see the [Contributing Guide](CONTRIBUTING.md) for details.
 
 ### Quick Contribution Steps
 1. Fork the repository
@@ -309,7 +307,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
@@ -336,7 +334,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+Contributions are welcomed! Please see the [Contributing Guide](CONTRIBUTING.md) for details.
 
 ### Quick Contribution Steps
 1. Fork the repository
@@ -345,18 +343,18 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **YouTube Data API v3** for providing the data
 - **Streamlit** for the amazing web framework
 - **Plotly** for interactive visualizations
 - **Contributors** who help improve this project
 
-## 📊 Project Stats
+## Project Stats
 
 - **Language**: Python
 - **Framework**: Streamlit
