@@ -329,7 +329,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **License**: MIT
 
 ## 🔗 Links
-- [Live Demo](https://live-youtube-trends.streamlit.app/#live-metrics)
+- [Live Demo](https://liveyoutubetrends.streamlit.app/))
 - [Documentation](README.md)
 - [Issues](https://github.com/saawezali/youtube-trends-analyser/issues)
 - [Contributing](CONTRIBUTING.md)
