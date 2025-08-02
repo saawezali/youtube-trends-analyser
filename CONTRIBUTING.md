@@ -235,21 +235,6 @@ Contributors will be recognized in:
 - **GitHub Discussions**: For questions and general discussion
 - **Documentation**: Check README.md and code comments
 
-## 📜 Code of Conduct
-
-### Our Pledge
-We are committed to making participation in this project a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
-
-### Our Standards
-- **Be respectful** and inclusive
-- **Be constructive** in feedback
-- **Focus on the code**, not the person
-- **Help others learn** and grow
-- **Be patient** with newcomers
-
-### Enforcement
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project maintainers. All complaints will be reviewed and investigated promptly and fairly.
-
 ---
 
-Thank you for contributing to the YouTube Analytics Dashboard! Your contributions help make this tool better for everyone. 🚀
+Thank you for contributing to the YouTube Analytics Dashboard! Your contributions help make this tool better for everyone.
