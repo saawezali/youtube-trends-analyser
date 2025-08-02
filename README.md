@@ -377,9 +377,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Saawez Ali]([https://www.linkedin.com/in/your-link](https://www.linkedin.com/in/saawez-ali-a7016a291/)  
 
 ---
-
-<div align="center">
-  <strong>⭐ Star this repository if you find it helpful!</strong>
-  <br>
-  <sub>Built with ❤️ by the community</sub>
-</div>
