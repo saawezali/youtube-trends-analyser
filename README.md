@@ -296,29 +296,7 @@ python test_api.py YOUR_API_KEY
 streamlit run app.py
 ```
 
-## Contributing
-
-We welcome contributions! Please see the [Contributing Guide](CONTRIBUTING.md) for details.
-
-### Quick Contribution Steps
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **YouTube Data API v3** for providing the data
-- **Streamlit** for the amazing web framework
-- **Plotly** for interactive visualizations
-- **Contributors** who help improve this project
-
-## 📊 Project Stats
+## Project Stats
 
 - **Language**: Python
 - **Framework**: Streamlit
@@ -326,13 +304,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Visualizations**: Plotly
 - **License**: MIT
 
-## 🔗 Links
+## Links
 - [Live Demo](https://liveyoutubetrends.streamlit.app/)
 - [Documentation](README.md)
 - [Issues](https://github.com/saawezali/youtube-trends-analyser/issues)
 - [Contributing](CONTRIBUTING.md)
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcomed! Please see the [Contributing Guide](CONTRIBUTING.md) for details.
 
@@ -353,14 +331,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Streamlit** for the amazing web framework
 - **Plotly** for interactive visualizations
 - **Contributors** who help improve this project
-
-## Project Stats
-
-- **Language**: Python
-- **Framework**: Streamlit
-- **API**: YouTube Data API v3
-- **Visualizations**: Plotly
-- **License**: MIT
 
 ## Author
 
