@@ -334,14 +334,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Issues](https://github.com/saawezali/youtube-trends-analyser/issues)
 - [Contributing](CONTRIBUTING.md)
 
----
-
-<div align="center">
-  <strong>⭐ Star this repository if you find it helpful!</strong>
-  <br>
-  <sub>Built with ❤️ for the community</sub>
-</div>
-
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
