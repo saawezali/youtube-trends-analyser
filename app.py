@@ -360,33 +360,33 @@ def display_video_card(video_data):
     
     with col2:
         st.markdown(f"**[{video_data['title'][:60]}...]({video_data['video_url']})**")
-        st.markdown(f"📺 **{video_data['channel_title']}**")
+        st.markdown(f"**{video_data['channel_title']}**")
         
         col_a, col_b, col_c = st.columns(3)
         with col_a:
-            st.metric("👀 Views", format_number(video_data['views']))
+            st.metric("Views", format_number(video_data['views']))
         with col_b:
-            st.metric("👍 Likes", format_number(video_data['likes']))
+            st.metric("Likes", format_number(video_data['likes']))
         with col_c:
-            st.metric("💬 Comments", format_number(video_data['comments']))
+            st.metric("Comments", format_number(video_data['comments']))
         
-        st.markdown(f"🏷️ **Category**: {video_data['category_name']} | ⏱️ **Published**: {video_data['hours_since_published']:.1f}h ago")
+        st.markdown(f"**Category**: {video_data['category_name']} | **Published**: {video_data['hours_since_published']:.1f}h ago")
 
 def main():
-    st.markdown('<h1 class="main-header">📺 <span class="live-indicator">🔴 LIVE</span> YouTube Analytics Dashboard</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header"><span class="live-indicator">🔴 LIVE</span> YouTube Analytics Dashboard</h1>', unsafe_allow_html=True)
     
     # Initialize analytics
     analytics = LiveYouTubeAnalytics()
     
     # API Key Setup
-    st.sidebar.header("🔑 API Configuration")
+    st.sidebar.header("API Configuration")
     
     # Check if API key is stored in secrets (with error handling)
     api_key = None
     try:
         if hasattr(st, 'secrets') and 'YOUTUBE_API_KEY' in st.secrets:
             api_key = st.secrets['YOUTUBE_API_KEY']
-            st.sidebar.success("✅ API key loaded from secrets")
+            st.sidebar.success("API key loaded from secrets")
     except (FileNotFoundError, KeyError):
         # No secrets file or key not found - this is normal
         pass
@@ -402,24 +402,24 @@ def main():
         
         if not api_key:
             st.sidebar.markdown("""
-            ### 🔧 How to get YouTube Data API Key:
+            ### How to get YouTube Data API Key:
             1. Go to [Google Cloud Console](https://console.cloud.google.com/)
             2. Create a new project or select existing
             3. Enable YouTube Data API v3
             4. Create credentials (API Key)
             5. Paste the key above
             
-            ### 📖 Need help?
+            ### Need help?
             Check the documentation for detailed setup instructions.
             """)
     
     if not api_key:
-        st.warning("⚠️ Please provide a YouTube Data API key to continue")
+        st.warning("Please provide a YouTube Data API key to continue")
         
         # Show setup instructions
-        with st.expander("📋 Quick Setup Guide", expanded=True):
+        with st.expander("Quick Setup Guide", expanded=True):
             st.markdown("""
-            ### 🚀 Get Started in 3 Steps:
+            ### Get Started in 3 Steps:
             
             **Step 1: Get API Key**
             - Visit [Google Cloud Console](https://console.cloud.google.com/)
@@ -493,16 +493,16 @@ def main():
         )
         
         if not search_query:
-            st.info("💡 Enter a search query to find specific videos on YouTube")
+            st.info("Enter a search query to find specific videos on YouTube")
             return
     
     # Category filter
     categories = analytics.get_video_categories(selected_region)
     category_options = ['All Categories'] + list(categories.values())
-    selected_category = st.sidebar.selectbox("🏷️ Category Filter", category_options)
+    selected_category = st.sidebar.selectbox("Category Filter", category_options)
     
     # Results limit
-    max_results = st.sidebar.slider("📊 Max Results", 10, 50, 25)
+    max_results = st.sidebar.slider("Max Results", 10, 50, 25)
     
     # Auto-refresh
     auto_refresh = st.sidebar.checkbox("🔄 Auto Refresh (30s)", value=False)
@@ -514,8 +514,8 @@ def main():
         st.rerun()
     
     # Fetch data
-    with st.spinner("🔄 Fetching live YouTube data..."):
-        if data_source == "🔥 Trending Videos":
+    with st.spinner("Fetching live YouTube data..."):
+        if data_source == "Trending Videos":
             category_id = None
             if selected_category != 'All Categories':
                 category_id = [k for k, v in categories.items() if v == selected_category]
@@ -526,20 +526,20 @@ def main():
             df = analytics.search_videos(search_query, selected_region, max_results)
     
     if df.empty:
-        st.error("❌ No data available. Please check your filters or try again.")
+        st.error("No data available. Please check your filters or try again.")
         return
     
     # Display last update time and stats
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.info(f"🕒 **Last Updated**: {datetime.now().strftime('%H:%M:%S')}")
+        st.info(f"**Last Updated**: {datetime.now().strftime('%H:%M:%S')}")
     with col2:
-        st.info(f"🌍 **Region**: {analytics.regions[selected_region]}")
+        st.info(f"**Region**: {analytics.regions[selected_region]}")
     with col3:
-        st.info(f"📊 **Videos Found**: {len(df)}")
+        st.info(f"**Videos Found**: {len(df)}")
     
     # KPIs
-    st.header("📊 Live Metrics")
+    st.header("Live Metrics")
     
     col1, col2, col3, col4 = st.columns(4)
     
@@ -547,7 +547,7 @@ def main():
         total_videos = len(df)
         st.markdown(f"""
         <div class="metric-container">
-            <h3>📈 Total Videos</h3>
+            <h3>Total Videos</h3>
             <h2>{total_videos:,}</h2>
         </div>
         """, unsafe_allow_html=True)
@@ -556,7 +556,7 @@ def main():
         avg_views = df['views'].mean()
         st.markdown(f"""
         <div class="metric-container">
-            <h3>👀 Average Views</h3>
+            <h3>Average Views</h3>
             <h2>{format_number(avg_views)}</h2>
         </div>
         """, unsafe_allow_html=True)
@@ -565,7 +565,7 @@ def main():
         avg_engagement = df['engagement_rate'].mean()
         st.markdown(f"""
         <div class="metric-container">
-            <h3>💝 Avg Engagement</h3>
+            <h3>Avg Engagement</h3>
             <h2>{avg_engagement:.2f}%</h2>
         </div>
         """, unsafe_allow_html=True)
@@ -574,7 +574,7 @@ def main():
         top_category = df['category_name'].mode().iloc[0] if not df.empty else 'N/A'
         st.markdown(f"""
         <div class="metric-container">
-            <h3>🏷️ Top Category</h3>
+            <h3>Top Category</h3>
             <h2>{top_category}</h2>
         </div>
         """, unsafe_allow_html=True)
@@ -582,10 +582,10 @@ def main():
     # Visualizations
     st.header("📈 Live Analytics & Insights")
     
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(["📊 Categories", "🏆 Top Videos", "📈 Engagement", "🌍 Channels", "🎬 Video Gallery"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["Categories", "Top Videos", "Engagement", "Channels", "Video Gallery"])
     
     with tab1:
-        st.subheader("📊 Video Categories Distribution")
+        st.subheader("Video Categories Distribution")
         category_counts = df['category_name'].value_counts().head(10)
         
         col1, col2 = st.columns(2)
@@ -613,7 +613,7 @@ def main():
             st.plotly_chart(fig_pie, use_container_width=True)
     
     with tab2:
-        st.subheader("🏆 Top Performing Videos")
+        st.subheader("Top Performing Videos")
         
         # Performance scatter plot
         top_videos = df.nlargest(20, 'views')
@@ -634,7 +634,7 @@ def main():
         st.plotly_chart(fig_scatter, use_container_width=True)
         
         # Top videos table
-        st.subheader("🎯 Top 10 Videos by Views")
+        st.subheader("Top 10 Videos by Views")
         top_10 = df.nlargest(10, 'views')[['title', 'channel_title', 'views', 'likes', 'engagement_rate', 'category_name']]
         top_10['views'] = top_10['views'].apply(format_number)
         top_10['likes'] = top_10['likes'].apply(format_number)
@@ -654,7 +654,7 @@ def main():
         )
     
     with tab3:
-        st.subheader("📈 Engagement Analysis")
+        st.subheader("Engagement Analysis")
         
         col1, col2 = st.columns(2)
         
@@ -688,21 +688,21 @@ def main():
             st.plotly_chart(fig_views_eng, use_container_width=True)
         
         # Engagement insights
-        st.subheader("💡 Engagement Insights")
+        st.subheader("Engagement Insights")
         high_engagement = df[df['engagement_rate'] > df['engagement_rate'].quantile(0.8)]
         
         col1, col2, col3 = st.columns(3)
         with col1:
-            st.metric("🔥 High Engagement Videos", len(high_engagement))
+            st.metric("High Engagement Videos", len(high_engagement))
         with col2:
             best_category = engagement_by_category.index[0] if len(engagement_by_category) > 0 else "N/A"
-            st.metric("🏆 Best Performing Category", best_category)
+            st.metric("Best Performing Category", best_category)
         with col3:
             avg_time_to_trend = df['hours_since_published'].mean()
-            st.metric("⏱️ Avg Hours to Trend", f"{avg_time_to_trend:.1f}h")
+            st.metric("Avg Hours to Trend", f"{avg_time_to_trend:.1f}h")
     
     with tab4:
-        st.subheader("🌍 Top Channels Analysis")
+        st.subheader("Top Channels Analysis")
         
         channel_stats = df.groupby('channel_title').agg({
             'views': 'sum',
@@ -746,7 +746,7 @@ def main():
             st.plotly_chart(fig_channel_scatter, use_container_width=True)
     
     with tab5:
-        st.subheader("🎬 Video Gallery")
+        st.subheader("Video Gallery")
         
         # Display options
         col1, col2, col3 = st.columns(3)
@@ -769,7 +769,7 @@ def main():
                 st.markdown("---")
     
     # Data Export Section
-    st.header("📥 Export Live Data")
+    st.header("Export Live Data")
     
     col1, col2, col3 = st.columns(3)
     
@@ -777,7 +777,7 @@ def main():
         # CSV Export
         csv = df.to_csv(index=False)
         st.download_button(
-            label="📊 Download as CSV",
+            label="Download as CSV",
             data=csv,
             file_name=f"youtube_live_data_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
             mime="text/csv",
@@ -788,7 +788,7 @@ def main():
         # JSON Export
         json_data = df.to_json(orient='records', date_format='iso')
         st.download_button(
-            label="📋 Download as JSON",
+            label="Download as JSON",
             data=json_data,
             file_name=f"youtube_live_data_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
             mime="application/json"
@@ -807,7 +807,7 @@ def main():
         }
         summary_json = json.dumps(summary, indent=2)
         st.download_button(
-            label="📈 Download Summary",
+            label="Download Summary",
             data=summary_json,
             file_name=f"youtube_summary_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
             mime="application/json"
@@ -826,9 +826,8 @@ def main():
     st.markdown(
         f"""
         <div style='text-align: center; color: #666; padding: 20px;'>
-            <p><span class="live-indicator">🔴 LIVE</span> YouTube Analytics Dashboard | Last Updated: {datetime.now().strftime('%H:%M:%S')}</p>
-            <p>📊 Data source: YouTube Data API v3 | 🌍 Region: {analytics.regions[selected_region]} | 🎬 Videos: {len(df)}</p>
-            <p>Built with ❤️ using Streamlit & Python</p>
+            <p><span class="live-indicator">LIVE</span> YouTube Analytics Dashboard | Last Updated: {datetime.now().strftime('%H:%M:%S')}</p>
+            <p>Data source: YouTube Data API v3 | Region: {analytics.regions[selected_region]} | 🎬 Videos: {len(df)}</p>
         </div>
         """, 
         unsafe_allow_html=True
