@@ -13,7 +13,7 @@ import time
 # Set page config
 st.set_page_config(
     page_title="Live YouTube Analytics Dashboard",
-    page_icon="📺",
+    page_icon="🔴",
     layout="wide",
     initial_sidebar_state="expanded"
 )
