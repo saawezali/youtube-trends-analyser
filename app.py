@@ -13,7 +13,7 @@ import time
 # Set page config
 st.set_page_config(
     page_title="Live YouTube Analytics Dashboard",
-    page_icon="🔴",
+    page_icon="📺",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -373,7 +373,7 @@ def display_video_card(video_data):
         st.markdown(f"**Category**: {video_data['category_name']} | **Published**: {video_data['hours_since_published']:.1f}h ago")
 
 def main():
-    st.markdown('<h1 class="main-header"><span class="live-indicator">🔴 LIVE</span> YouTube Analytics Dashboard</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">📺 <span class="live-indicator">🔴 LIVE</span> YouTube Analytics Dashboard</h1>', unsafe_allow_html=True)
     
     # Initialize analytics
     analytics = LiveYouTubeAnalytics()
@@ -435,11 +435,11 @@ def main():
             - Paste your API key in the sidebar
             - Start exploring live YouTube data!
             
-            ### 🎯 What You'll Get:
-            - ✅ Real-time trending videos from 15+ countries
-            - ✅ Live search across YouTube's database
-            - ✅ Current engagement metrics and analytics
-            - ✅ Interactive visualizations and insights
+            ### What You'll Get:
+            - Real-time trending videos from 15+ countries
+            - Live search across YouTube's database
+            - Current engagement metrics and analytics
+            - Interactive visualizations and insights
             """)
         return
     
@@ -449,12 +449,12 @@ def main():
     is_connected, connection_message = analytics.test_api_connection()
     
     if is_connected:
-        st.sidebar.markdown(f'<div class="api-status api-success">✅ {connection_message}</div>', unsafe_allow_html=True)
+        st.sidebar.markdown(f'<div class="api-status api-success">{connection_message}</div>', unsafe_allow_html=True)
     else:
-        st.sidebar.markdown(f'<div class="api-status api-error">❌ {connection_message}</div>', unsafe_allow_html=True)
+        st.sidebar.markdown(f'<div class="api-status api-error">{connection_message}</div>', unsafe_allow_html=True)
         st.error(f"API Connection Failed: {connection_message}")
         
-        with st.expander("🔧 Troubleshooting"):
+        with st.expander("Troubleshooting"):
             st.markdown("""
             ### Common Issues:
             - **Invalid API Key**: Make sure you copied the entire key
@@ -465,19 +465,19 @@ def main():
         return
     
     # Sidebar controls
-    st.sidebar.header("🔍 Live Controls")
+    st.sidebar.header("Live Controls")
     
     # Data source selection
     data_source = st.sidebar.radio(
         "Data Source",
-        ["🔥 Trending Videos", "🔍 Search Videos"],
+        ["Trending Videos", "Search Videos"],
         help="Choose between trending videos or search results"
     )
     
     # Region selection
     regions = list(analytics.regions.keys())
     selected_region = st.sidebar.selectbox(
-        "🌍 Select Region",
+        "Select Region",
         regions,
         index=0,
         help="Choose a country/region for data"
@@ -485,9 +485,9 @@ def main():
     
     # Search query (if search mode)
     search_query = None
-    if data_source == "🔍 Search Videos":
+    if data_source == "Search Videos":
         search_query = st.sidebar.text_input(
-            "🔍 Search Query",
+            "Search Query",
             placeholder="e.g., 'python tutorial', 'music video'",
             help="Enter keywords to search for videos"
         )
@@ -505,11 +505,11 @@ def main():
     max_results = st.sidebar.slider("Max Results", 10, 50, 25)
     
     # Auto-refresh
-    auto_refresh = st.sidebar.checkbox("🔄 Auto Refresh (30s)", value=False)
+    auto_refresh = st.sidebar.checkbox("Auto Refresh (30s)", value=False)
     refresh_placeholder = st.sidebar.empty()
     
     # Manual refresh button
-    if st.sidebar.button("🔄 Refresh Data Now", type="primary"):
+    if st.sidebar.button("Refresh Data Now", type="primary"):
         st.cache_data.clear()
         st.rerun()
     
@@ -580,7 +580,7 @@ def main():
         """, unsafe_allow_html=True)
     
     # Visualizations
-    st.header("📈 Live Analytics & Insights")
+    st.header("Live Analytics & Insights")
     
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["Categories", "Top Videos", "Engagement", "Channels", "Video Gallery"])
     
@@ -817,7 +817,7 @@ def main():
     if auto_refresh:
         with refresh_placeholder:
             for i in range(30, 0, -1):
-                st.info(f"🔄 Auto-refresh in {i} seconds...")
+                st.info(f"Auto-refresh in {i} seconds...")
                 time.sleep(1)
         st.rerun()
     
@@ -826,8 +826,8 @@ def main():
     st.markdown(
         f"""
         <div style='text-align: center; color: #666; padding: 20px;'>
-            <p><span class="live-indicator">LIVE</span> YouTube Analytics Dashboard | Last Updated: {datetime.now().strftime('%H:%M:%S')}</p>
-            <p>Data source: YouTube Data API v3 | Region: {analytics.regions[selected_region]} | 🎬 Videos: {len(df)}</p>
+            <p><span class="live-indicator">🔴 LIVE</span> YouTube Analytics Dashboard | Last Updated: {datetime.now().strftime('%H:%M:%S')}</p>
+            <p>Data source: YouTube Data API v3 | Region: {analytics.regions[selected_region]} | Videos: {len(df)}</p>
         </div>
         """, 
         unsafe_allow_html=True
