@@ -15,7 +15,7 @@ setup(
     name="youtube-trends-analyser",
     version="1.0.0",
     author="Saawez Ali",
-    author_email="alisaawez@gmail.com",
+    author_email="sayyedsaawezali@gmail.com",
     description="A powerful, real-time YouTube analytics dashboard",
     long_description=long_description,
     long_description_content_type="text/markdown",
